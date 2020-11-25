@@ -1,1 +1,7 @@
-import scrapy as sp
+import scrapy
+
+#scrapy startproject scrapyaffichagesmaisons
+
+#spider
+
+class MaisonsSpider(scrapy.Spider):
