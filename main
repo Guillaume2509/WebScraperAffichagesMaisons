@@ -5,3 +5,10 @@ import scrapy
 #spider
 
 class MaisonsSpider(scrapy.Spider):
+    name = "AffichageMaisons"
+    
+    start_urls = [ #à corriger, de cierto
+        "https://duproprio.com/page/1"
+        "https://remax.com"
+        "https://royallepage.com"]
+        
