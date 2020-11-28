@@ -22,4 +22,4 @@ class MaisonsSpider(scrapy.Spider):
 
 '''TODO: sur la commande (plusieurs fonctions):
 scrapy shell https://duproprio.com/ (s'assurer de mettre le bon argument, on a modifié par rapport au tutoriel)
-response.css('title')
+response.css('title')'''
