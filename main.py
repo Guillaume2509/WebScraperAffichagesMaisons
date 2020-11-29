@@ -1,6 +1,6 @@
 import scrapy
 
-#TODO: sur la commande: scrapy startproject scrapyaffichagesmaisons
+#TODO: créer le sous-projet et réajuster l'architecture du code: https://youtu.be/Wp6LRijW9wg
 
 #spider
 
@@ -18,8 +18,3 @@ class MaisonsSpider(scrapy.Spider):
         with open(filename, 'wb') as f:
             f.write(response.body)
             
-#TODO: sur la commande: scrapy crawl AffichageMaisons
-
-'''TODO: sur la commande (plusieurs fonctions):
-scrapy shell https://duproprio.com/ (s'assurer de mettre le bon argument, on a modifié par rapport au tutoriel)
-response.css('title')'''
