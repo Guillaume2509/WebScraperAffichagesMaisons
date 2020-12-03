@@ -18,3 +18,6 @@ class MaisonsSpider(scrapy.Spider):
         with open(filename, 'wb') as f:
             f.write(response.body)
             
+
+if __name__ == "__main__":
+    main()
