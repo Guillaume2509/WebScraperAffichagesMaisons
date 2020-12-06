@@ -11,4 +11,7 @@ class MaisonsSpider(scrapy.Spider):
         filename = "essai_page_web1.html"
         with open(filename, "wb") as f:
             f.write(response.body)
-        
+
+    #parse2
+    '''def parse(self, response):
+        for post in response.xpath("blablabla"):'''
