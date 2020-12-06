@@ -8,5 +8,5 @@ Sortie: Adresse, prix, surface habitable
 
 
 XPATH complet du prix: /html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]
-XPATH complet de l'adresse: /html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[3]
+XPATH complet de l'adresse: /html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[3]/div/h1 #Vérifié
 XPATH complet de la surface habitable: /html/body/main/div[1]/div/div[1]/section[1]/article/div[1]/div[4]/div[1]/div[2]/span[2]
