@@ -1,4 +1,5 @@
 import scrapy
+import re
 
 class MaisonsSpider(scrapy.Spider):
     
@@ -19,10 +20,14 @@ class MaisonsSpider(scrapy.Spider):
         #Extraction de l'adresse, prix et surface
         adresse = response.xpath('/html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[3]/div/h1/text()').extract()
         prix = response.xpath('/html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/text()').extract()
+        prix = str(prix)
+        prix = prix.replace('\\xa0', '')
+        prix = re.search("\\d+\\$", prix, re.MULTILINE).group()
         surface = response.xpath('/html/body/main/div[1]/div/div[1]/section[1]/article/div[1]/div[4]/div[1]/div[2]/span[2]/text()').extract()
         
         #Création d'une ligne type csv
-        line = str(adresse) + "," + str(prix) + "," + str(surface)
+        #line = str(adresse) + "," + prix + "," + str(surface)
+        line = prix
 
         #Ajout de la ligne au fichier
         with open(filename, "w") as f:
