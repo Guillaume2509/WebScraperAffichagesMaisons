@@ -1,7 +1,7 @@
 import scrapy
 
 #TODO: créer le sous-projet et réajuster l'architecture du code: https://youtu.be/Wp6LRijW9wg
-
+ #a
 #spider
 
 class MaisonsSpider(scrapy.Spider):
