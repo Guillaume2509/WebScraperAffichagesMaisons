@@ -1,12 +1,16 @@
 Regroupement des itérations:
 
+Itération 2:
+
+Entrée 2: Notre dossier WebScraperAffichagesMaisons
+
+Sortie: Construire le dossier comme le bonhomme de microsoft: https://www.youtube.com/watch?v=RKHMnevITF0&list=WL&index=60&t=283s
+et rouler sur un fichier main
+
+##################
+
 Itération 1:
 
 Entrée: 1 affichage de maison (duproprio, sur une seule page web) : https://duproprio.com/fr/quebec-rive-sud/levis/maison-a-vendre/hab-5338-rue-saint-georges-744976#la-capitale
 
 Sortie: Adresse, prix, surface habitable
-
-
-XPATH complet du prix: /html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]
-XPATH complet de l'adresse: /html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[3]/div/h1 #Vérifié
-XPATH complet de la surface habitable: /html/body/main/div[1]/div/div[1]/section[1]/article/div[1]/div[4]/div[1]/div[2]/span[2]
