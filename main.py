@@ -7,4 +7,4 @@ from CueilletteInformations.CueilletteInformations.spiders.cueillette_spider imp
 if __name__ == "__main__":
     process = CrawlerProcess()
 
-    process.crawl(MaisonsSpider)
+process.crawl(MaisonsSpider)
