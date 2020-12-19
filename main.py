@@ -12,3 +12,5 @@ process.crawl(MaisonsSpider)
 
     maisons = pd.read_csv(maisons_path)
     
+    print(flip_net_return)
+    
