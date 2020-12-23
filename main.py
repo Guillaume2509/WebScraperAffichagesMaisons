@@ -3,7 +3,6 @@ from CueilletteInformations.CueilletteInformations.spiders.cueillette_spider imp
 
 
 #TODO: 1-Scraping 2-Scoring
-maisons_path = "path.csv"
             
 
 if __name__ == "__main__":
