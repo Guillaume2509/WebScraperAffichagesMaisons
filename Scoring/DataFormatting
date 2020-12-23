@@ -1,0 +1,10 @@
+import csv
+
+
+with open('dataFlips.csv', 'wb') as f:
+
+    fieldnames = ['var1', 'var2', 'etc']
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    
+    writer.writeheader()
+    writer.writerrow({'var1': 'Patate', 'var2': 'MegaPatate', 'etc': 'etAutres'})
