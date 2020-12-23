@@ -2,6 +2,7 @@ from scrapy.crawler import CrawlerProcess
 from CueilletteInformations.CueilletteInformations.spiders.cueillette_spider import MaisonsSpider
 
 
+#TODO: 1-Scraping 2-Scoring
 maisons_path = "path.csv"
             
 
