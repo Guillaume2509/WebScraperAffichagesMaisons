@@ -1,5 +1,5 @@
 from scrapy.crawler import CrawlerProcess
-from CueilletteInformations.CueilletteInformations.spiders.cueillette_spider import MaisonsSpider
+from Scraping.Scraping.spiders.cueillette_spider import MaisonsSpider
 
 
 #TODO: 1-Scraping 2-Scoring
