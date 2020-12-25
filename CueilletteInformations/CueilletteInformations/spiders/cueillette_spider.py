@@ -8,7 +8,7 @@ class MaisonsSpider(scrapy.Spider):
     
     #Liste des URL à Scraper
     start_urls = [
-        "https://duproprio.com/fr/quebec-rive-sud/levis/maison-a-vendre/hab-5338-rue-saint-georges-744976#la-capitale"]
+        "https://duproprio.com/fr/quebec-rive-sud/levis/maison-en-rangee-de-ville-a-vendre/hab-5897-rue-berlioz-920663"]
         
 
     #Parser
@@ -27,10 +27,11 @@ class MaisonsSpider(scrapy.Spider):
         prix = prix.replace('\\xa0', '')
         prix = re.search("\\d+\\$", prix, re.MULTILINE).group()
 
-        surface = response.xpath('/html/body/main/div[1]/div/div[1]/section[1]/article/div[1]/div[4]/div[1]/div[2]/span[2]/text()').extract()
+        '''surface = response.xpath('/html/body/main/div[1]/div/div[1]/section[1]/article/div[1]/div[4]/div[1]/div[2]/span[2]/text()').extract()
         surface = str(surface)
         surface = re.search("\\d*\\s?\\d*\\s?\\d+\\spi", surface, re.MULTILINE).group()
-        surface = surface.replace(' ', '') + "2"
+        surface = surface.replace(' ', '') + "2"'''
+        surface = "None"
         
         #Création d'une ligne type csv
         line = adresse + "," + prix + "," + surface
