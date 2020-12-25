@@ -1,0 +1,7 @@
+Étapes du pipeline
+
+1) Scraping
+    Sorties: fichier CSV du scraping des informations
+    
+2) Scoring
+    Sorties: fichier CSV des scores des maisons
