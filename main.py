@@ -3,14 +3,22 @@ from CueilletteInformations.CueilletteInformations.spiders.cueillette_spider imp
 
 
 #TODO: 1-Scraping 2-Scoring
+
+def Scraping():
+    '''Appeler le Scraping'''
+    process = CrawlerProcess()
+    
+    process = process.crawl(MaisonsSpider)
+    
+def Scoring():
+    '''Construire le Scoring'''
+    maisons = pd.read_csv(maisons_path)
+    
+    to_csv(flip_net_return)
             
 
 if __name__ == "__main__":
-    process = CrawlerProcess()
-
-process.crawl(MaisonsSpider)
-
-    maisons = pd.read_csv(maisons_path)
+    Scraping()
     
-    print(flip_net_return)
+    Scoring()
     
