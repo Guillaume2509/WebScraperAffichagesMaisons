@@ -12,6 +12,8 @@ def Scraping():
     
 def Scoring():
     '''Construire le Scoring'''
+    import json
+    
     with open('dataFlips.csv', 'wb') as f:
 
     fieldnames = ['var1', 'var2', 'etc']
