@@ -12,9 +12,13 @@ def Scraping():
     
 def Scoring():
     '''Construire le Scoring'''
-    maisons = pd.read_csv(maisons_path)
+    with open('dataFlips.csv', 'wb') as f:
+
+    fieldnames = ['var1', 'var2', 'etc']
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
     
-    to_csv(flip_net_return)
+    writer.writeheader()
+    writer.writerrow({'var1': 'gen1', 'var2': 'gen2', 'etc': 'genAutres'})
             
 
 if __name__ == "__main__":
