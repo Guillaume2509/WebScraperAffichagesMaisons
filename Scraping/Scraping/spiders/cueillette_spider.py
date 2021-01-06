@@ -18,20 +18,28 @@ class MaisonsSpider(scrapy.Spider):
         filename = 'maisons.txt'
         
         #Extraction de l'adresse, prix et surface
-        adresse = response.xpath('/html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[3]/div/h1/text()').extract()
-        adresse = str(adresse)
-        adresse = adresse.replace('[\'', '').replace(',', '').replace('\']', '')
+        try:
+            adresse = response.xpath('/html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[3]/div/h1/text()').extract()
+            adresse = str(adresse)
+            adresse = adresse.replace('[\'', '').replace(',', '').replace('\']', '')
+        except:
+            adresse = "Failed to parse"
 
-        prix = response.xpath('/html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/text()').extract()
-        prix = str(prix)
-        prix = prix.replace('\\xa0', '')
-        prix = re.search("\\d+\\$", prix, re.MULTILINE).group()
+        try:
+            prix = response.xpath('/html/body/main/div[1]/div/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/text()').extract()
+            prix = str(prix)
+            prix = prix.replace('\\xa0', '')
+            prix = re.search("\\d+\\$", prix, re.MULTILINE).group()
+        except:
+            prix = "Failed to parse"
 
-        '''surface = response.xpath('/html/body/main/div[1]/div/div[1]/section[1]/article/div[1]/div[4]/div[1]/div[2]/span[2]/text()').extract()
-        surface = str(surface)
-        surface = re.search("\\d*\\s?\\d*\\s?\\d+\\spi", surface, re.MULTILINE).group()
-        surface = surface.replace(' ', '') + "2"'''
-        surface = "None"
+        try:
+            surface = response.xpath('/html/body/main/div[1]/div/div[1]/section[1]/article/div[1]/div[4]/div[1]/div[2]/span[2]/text()').extract()
+            surface = str(surface)
+            surface = re.search("\\d*\\s?\\d*\\s?\\d+\\spi", surface, re.MULTILINE).group()
+            surface = surface.replace(' ', '') + "2"
+        except:
+            surface = "Failed to pass"
         
         #Création d'une ligne type csv
         line = adresse + "," + prix + "," + surface
