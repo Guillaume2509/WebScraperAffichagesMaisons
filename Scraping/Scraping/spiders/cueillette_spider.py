@@ -47,9 +47,9 @@ class MaisonsSpider(scrapy.Spider):
         #Ajout de la ligne au fichier
         with open(filename, "w") as f:
         
-        fieldnames = ['adresse', 'prix', 'prix']
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
+            fieldnames = ['adresse', 'prix', 'prix']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
     
-        writer.writerrow(line)
+            writer.writerrow(line)
     
