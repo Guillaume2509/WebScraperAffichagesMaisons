@@ -42,8 +42,14 @@ class MaisonsSpider(scrapy.Spider):
             surface = "Failed to parse"
         
         #Création d'une ligne type csv
-        line = adresse + "," + prix + "," + surface
+        line = {"adresse":adresse, "prix":prix, "surface":surface}
 
         #Ajout de la ligne au fichier
         with open(filename, "w") as f:
-            f.write(line)
+        
+        fieldnames = ['adresse', 'prix', 'prix']
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+    
+        writer.writerrow(line)
+    

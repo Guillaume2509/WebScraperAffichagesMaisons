@@ -14,13 +14,9 @@ def Scoring():
     '''Construire le Scoring'''
     import json
     
-    with open('dataFlips.csv', 'wb') as f:
+    with open('Scraping/maisons.csv', 'wb') as f:
 
-    fieldnames = ['var1', 'var2', 'etc']
-    writer = csv.DictWriter(f, fieldnames=fieldnames)
-    
-    writer.writeheader()
-    writer.writerrow({'var1': 'gen1', 'var2': 'gen2', 'etc': 'genAutres'})
+    return "Todo"
             
 
 if __name__ == "__main__":
