@@ -15,7 +15,7 @@ class MaisonsSpider(scrapy.Spider):
     def parse(self, response):
         
         #Nom du fichier texte
-        filename = 'maisons.txt'
+        filename = 'maisons.csv'
         
         #Extraction de l'adresse, prix et surface
         try:
