@@ -39,7 +39,7 @@ class MaisonsSpider(scrapy.Spider):
             surface = re.search("\\d*\\s?\\d*\\s?\\d+\\spi", surface, re.MULTILINE).group()
             surface = surface.replace(' ', '') + "2"
         except:
-            surface = "Failed to pass"
+            surface = "Failed to parse"
         
         #Création d'une ligne type csv
         line = adresse + "," + prix + "," + surface
