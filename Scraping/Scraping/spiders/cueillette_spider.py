@@ -10,6 +10,9 @@ class MaisonsSpider(scrapy.Spider):
     start_urls = [
         "https://duproprio.com/fr/quebec-rive-sud/levis/maison-en-rangee-de-ville-a-vendre/hab-5897-rue-berlioz-920663"]
         
+        # Pour faire toutes les villes, essayer ça (à 25:06): 
+        # https://youtu.be/lNajD34Sfmg
+        
 
     #Parser
     def parse(self, response):
