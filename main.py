@@ -6,6 +6,7 @@ from Scraping.Scraping.spiders.cueillette_spider import MaisonsSpider
 
 def Scraping():
     '''Appeler le Scraping'''
+    #Tutoriel: https://towardsdatascience.com/how-to-run-scrapy-from-a-script-ff07fd6b792b
     process = CrawlerProcess()
     
     process = process.crawl(MaisonsSpider)
@@ -16,7 +17,11 @@ def Scoring():
     
     with open('Scraping/maisons.csv', 'wb') as f:
 
-    return "Todo"
+    return todo
+    
+def display():
+    '''Print the results'''
+    read_csv(mettre le path du csv ici)
             
 
 if __name__ == "__main__":
