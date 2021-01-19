@@ -4,7 +4,7 @@ import re
 class MaisonsSpider(scrapy.Spider):
     
     #Nom du spider
-    name = "AffichageMaisons"
+    name = "scrapeMaisons"
     
     #Liste des URL à Scraper
     start_urls = [
