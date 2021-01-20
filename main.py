@@ -1,3 +1,4 @@
+import pandas as pd
 from scrapy.crawler import CrawlerProcess
 from Scraping.Scraping.spiders.cueillette_spider import MaisonsSpider
 
@@ -20,11 +21,9 @@ def Scraping():
     
 def Scoring():
     '''Construire le Scoring'''
-    import json
     
-    with open('Scraping/maisons.csv', 'wb') as f:
-
-    return todo
+    #Loader le csv
+    maisons = pd.read_csv("Scraping/maisons.csv", args)
     
 def display():
     '''Print the results'''
