@@ -1,17 +1,28 @@
 import scrapy
 import re
 
+class spListAffiDuProp(scrapy.Spider):
+    
+    #Nom du spider
+    name = "scrapeListeAffichages"
+
+    #TODO: Faire un Scraping récursif, c'est-à-dire, scraper les
+    #affichages sur la page principale de DuProprio et retourner
+    #les url de ces affichages, et pour chaque url, faire un second
+    #scraping pour retirer les informations que l'on recherche, le
+    #tout dans un loop avec les chiffres de pages, parce que la
+    #page principale de DuProprio a des chiffres.
+
 class MaisonsSpider(scrapy.Spider):
     
     #Nom du spider
-    name = "scrapeMaisons"
+    name = "scrapeAffichagesIndividuels"
     
     #Liste des URL à Scraper
     start_urls = [
         "https://duproprio.com/fr/quebec-rive-sud/levis/maison-en-rangee-de-ville-a-vendre/hab-5897-rue-berlioz-920663"]
         
-        # Pour faire toutes les villes, essayer ça (à 25:06): 
-        # https://youtu.be/lNajD34Sfmg
+        # Scraping recursively: https://stackoverflow.com/questions/34501458/crawling-a-site-recursively-using-scrapy
         
 
     #Parser
