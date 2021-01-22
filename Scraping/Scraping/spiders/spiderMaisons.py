@@ -1,10 +1,12 @@
 import scrapy
 import re
 
-class spListAffiDuProp(scrapy.Spider):
+class ScrapeListeAffichagesDuProprio(scrapy.Spider):
     
     #Nom du spider
-    name = "scrapeListeAffichages"
+    name = "scrapeListeAffichagesDuProprio"
+    #URL de départ
+    start_urls =
 
     #TODO: Faire un Scraping récursif, c'est-à-dire, scraper les
     #affichages sur la page principale de DuProprio et retourner
@@ -13,10 +15,10 @@ class spListAffiDuProp(scrapy.Spider):
     #tout dans un loop avec les chiffres de pages, parce que la
     #page principale de DuProprio a des chiffres.
 
-class MaisonsSpider(scrapy.Spider):
+class ScrapeAffichagesIndividuelsDuProprio(scrapy.Spider):
     
     #Nom du spider
-    name = "scrapeAffichagesIndividuels"
+    name = "scrapeAffichagesIndividuelsDuProprio"
     
     #Liste des URL à Scraper
     start_urls = [
