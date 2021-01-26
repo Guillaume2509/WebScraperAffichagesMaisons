@@ -7,6 +7,8 @@ class ScrapeListeAffichagesDuProprio(scrapy.Spider):
     name = "scrapeListeAffichagesDuProprio"
     #URL de départ
     start_urls = ["https://duproprio.com/fr/rechercher/liste"]
+    
+    def parse(self, response):
 
     #TODO: Faire un Scraping récursif, c'est-à-dire, scraper les
     #affichages sur la page principale de DuProprio et retourner
