@@ -7,12 +7,13 @@ class ScrapeListeAffichagesDuProprio(scrapy.Spider):
     name = "scrapeListeAffichagesDuProprio"
     #URL de départ
     start_urls = ["https://duproprio.com/fr/rechercher/liste?search=true&cities%5B0%5D=633&type%5B0%5D=house&subtype%5B0%5D=1&subtype%5B1%5D=2&subtype%5B2%5D=4&subtype%5B3%5D=5&subtype%5B4%5D=6&subtype%5B5%5D=7&subtype%5B6%5D=9&subtype%5B7%5D=10&subtype%5B8%5D=11&subtype%5B9%5D=13&subtype%5B10%5D=15&subtype%5B11%5D=17&subtype%5B12%5D=19&subtype%5B13%5D=21&subtype%5B14%5D=97&subtype%5B15%5D=99&subtype%5B16%5D=100&is_for_sale=1&with_builders=1&parent=1&pageNumber=2&sort=-published_at"]
-
+    #Fait intéressant, les listings de décuplent à partir de ce niveau dans css:
+    #html.flexbox.flexwrap.flexboxlegacy.no-flexboxtweener.webp.webp-alpha.webp-animation.webp-losslessno-touch body.prov-qc.duproprio.notranslate main.container div.search-results-container div.search-results-listings-container div.search-results-listings-container__main-content div.search-results-listings ul.search-results-listings-list
     
     def parse(self, response):
         
-        url = response.xpath(
-        
+        url = response.css('html.flexbox.flexwrap.flexboxlegacy.no-flexboxtweener.webp.webp-alpha.webp-animation.webp-losslessno-touch body.prov-qc.duproprio.notranslate main.container div.search-results-container div.search-results-listings-container div.search-results-listings-container__main-content div.search-results-listings ul.search-results-listings-list li#listing-941231.search-results-listings-list__item a.search-results-listings-list__item-image-link').extract()
+        # TODO: Ajouter l'argument href à notre css pour bien recueillir l'url recherché.
         # Scraping recursively: https://stackoverflow.com/questions/34501458/crawling-a-site-recursively-using-scrapy
         
 
