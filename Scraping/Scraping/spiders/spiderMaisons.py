@@ -15,6 +15,7 @@ class ScrapeListeAffichagesDuProprio(scrapy.Spider):
         for post in response.css('html.flexbox.flexwrap.flexboxlegacy.no-flexboxtweener.webp.webp-alpha.webp-animation.webp-losslessno-touch body.prov-qc.duproprio.notranslate main.container div.search-results-container div.search-results-listings-container div.search-results-listings-container__main-content div.search-results-listings ul.search-results-listings-list')
             url = post.css('.ref') #Pas 100% sur avec le .ref, à voir
     '''
+    #Le bon tutoriel: https://youtu.be/lNajD34Sfmg
     
     def parse(self, response):
         
