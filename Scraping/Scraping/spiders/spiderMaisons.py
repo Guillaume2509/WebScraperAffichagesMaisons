@@ -21,7 +21,7 @@ class ScrapeListeAffichagesDuProprio(scrapy.Spider):
         
         url = response.css('html.flexbox.flexwrap.flexboxlegacy.no-flexboxtweener.webp.webp-alpha.webp-animation.webp-losslessno-touch body.prov-qc.duproprio.notranslate main.container div.search-results-container div.search-results-listings-container div.search-results-listings-container__main-content div.search-results-listings ul.search-results-listings-list li#listing-941231.search-results-listings-list__item a.search-results-listings-list__item-image-link').extract()
         url = str(url)
-        # url = url.replace(
+        url = url.replace(
         # TODO: Ajouter l'argument href à notre css pour bien recueillir l'url recherché.
         # Scraping recursively: https://stackoverflow.com/questions/34501458/crawling-a-site-recursively-using-scrapy
         
