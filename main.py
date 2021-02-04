@@ -14,7 +14,7 @@ def Scraping():
     process = CrawlerProcess()
     
     #2) On configure l'objet CrawlerProcess à notre spider MaisonSpider
-    process = process.crawl(MaisonsSpider)
+    process = process.crawl(scrapeListeAffichagesDuProprio)
     
     #3) On démarre le Crawler, comme si on était sur la ligne de commande. Il devrait nous retourner notre fichier CSV au Scraping/maisons.csv
     process.start()
