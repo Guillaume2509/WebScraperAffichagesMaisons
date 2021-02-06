@@ -32,7 +32,7 @@ def display():
 
 if __name__ == "__main__":
     Scraping()
-    #TODO: Faire fonctionner le debugger dans VSCode
+    #TODO: Faire fonctionner le debugger dans VSCode x
     
     Scoring()
     
